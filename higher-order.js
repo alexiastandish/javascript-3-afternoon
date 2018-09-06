@@ -9,7 +9,7 @@
 ////////// PROBLEM 1 //////////
 
 // Do not edit the code below.
-const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
+const mixedNumbers = [6, 3, 1, 7, 5, 2, 6, 8, 9, 4, 2, 7, 9, 3, 1, 8, 4, 3]
 // Do not edit the code above.
 
 /*
@@ -20,15 +20,12 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
   (element, index, wholeArray)=>{}    Arrow Form
 */
 
-//Code Here
-let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
-
-
+let evenNumbers = mixedNumbers.filter(e => e % 2 === 0)
 
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
-const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
+const prices = [15.0, 23.0, 78.0, 34.0, 12.0, 86.0, 12.0, 79.0, 32.0]
 // Do not edit the code above.
 
 /*
@@ -43,15 +40,13 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
   (element, index, wholeArray)=>{}    Arrow Form
 */
 
-//Code Here
-let postTaxPrices // = prices.map(/* Provide Your Callback Here );
-
-
+const tax = 1.07
+let postTaxPrices = prices.map(e => e * tax)
 
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
-const populations = [8175133, 3792621, 2695598, 2100263];
+const populations = [8175133, 3792621, 2695598, 2100263]
 // Do not edit the code above.
 
 /*
@@ -62,23 +57,40 @@ const populations = [8175133, 3792621, 2695598, 2100263];
   (runningTotal, curElement, curIndex, wholeArray)=>{} Arrow Form
 */
 
-//Code Here
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
-
-
+let totalPopulation = populations.reduce(function(acc, cur, i, arr) {
+  return (acc += cur)
+})
 
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
-const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},
-{"monster":"Bulbabunny","CP":250},{"monster":"Ponylopse","CP":277},{"monster":"Ponylopse","CP":184},
-{"monster":"Pikadoughnet","CP":207},{"monster":"Bulbabunny","CP":139},{"monster":"Pikadoughnet","CP":47},
-{"monster":"Pikadoughnet","CP":175},{"monster":"WaterHorsia","CP":26},{"monster":"Ponylopse","CP":19},
-{"monster":"Pikadoughnet","CP":218},{"monster":"Charaflier","CP":101},{"monster":"WaterHorsia","CP":96},
-{"monster":"Pikadoughnet","CP":253},{"monster":"Sandmush","CP":146},{"monster":"Bulbabunny","CP":247},
-{"monster":"Charaflier","CP":55},{"monster":"Bulbabunny","CP":72},{"monster":"Pikadoughnet","CP":300},
-{"monster":"Sandmush","CP":262},{"monster":"Sandmush","CP":25},{"monster":"Charaflier","CP":215},
-{"monster":"Ponylopse","CP":125},{"monster":"Bulbabunny","CP":178}];
+const monstersInYourPocket = [
+  { monster: 'Bulbabunny', CP: 156 },
+  { monster: 'Bulbabunny', CP: 135 },
+  { monster: 'Bulbabunny', CP: 250 },
+  { monster: 'Ponylopse', CP: 277 },
+  { monster: 'Ponylopse', CP: 184 },
+  { monster: 'Pikadoughnet', CP: 207 },
+  { monster: 'Bulbabunny', CP: 139 },
+  { monster: 'Pikadoughnet', CP: 47 },
+  { monster: 'Pikadoughnet', CP: 175 },
+  { monster: 'WaterHorsia', CP: 26 },
+  { monster: 'Ponylopse', CP: 19 },
+  { monster: 'Pikadoughnet', CP: 218 },
+  { monster: 'Charaflier', CP: 101 },
+  { monster: 'WaterHorsia', CP: 96 },
+  { monster: 'Pikadoughnet', CP: 253 },
+  { monster: 'Sandmush', CP: 146 },
+  { monster: 'Bulbabunny', CP: 247 },
+  { monster: 'Charaflier', CP: 55 },
+  { monster: 'Bulbabunny', CP: 72 },
+  { monster: 'Pikadoughnet', CP: 300 },
+  { monster: 'Sandmush', CP: 262 },
+  { monster: 'Sandmush', CP: 25 },
+  { monster: 'Charaflier', CP: 215 },
+  { monster: 'Ponylopse', CP: 125 },
+  { monster: 'Bulbabunny', CP: 178 },
+]
 // Do not edit the code above.
 
 /*
@@ -88,44 +100,67 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
   Use the filter method to return only the monsters that have a CP of over 200.
 */
 
-//Code Here
-let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
-
-
+let myStrongest = monstersInYourPocket.filter(e => e['CP'] > 200)
 
 ////////// PROBLEM 5 //////////
 
 // Do not edit code below.
-const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax":0.11},
-{"price":80,"tax":0.11},{"price":69,"tax":0.06},{"price":68,"tax":0.14},
-{"price":72,"tax":0.14},{"price":51,"tax":0.09},{"price":89,"tax":0.15},
-{"price":48,"tax":0.13}];
+const orders = [
+  { price: 15, tax: 0.09 },
+  { price: 42, tax: 0.07 },
+  { price: 56, tax: 0.11 },
+  { price: 80, tax: 0.11 },
+  { price: 69, tax: 0.06 },
+  { price: 68, tax: 0.14 },
+  { price: 72, tax: 0.14 },
+  { price: 51, tax: 0.09 },
+  { price: 89, tax: 0.15 },
+  { price: 48, tax: 0.13 },
+]
 // Do not edit code above.
 
 /*
   Use a higher order method to get all the order totals after adding in the sales tax. Your answer should be an array of numbers, one total for each order.
 */
 
-let orderTotals // Code here
-
-
+let orderTotals = orders.map(function(e) {
+  return e.price + e.price * e.tax
+})
 
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
-const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
-{"owner":"Bob","price":73},{"owner":"Barry","price":57},{"owner":"Barry","price":128},
-{"owner":"Bob","price":119},{"owner":"Barry","price":133},{"owner":"Barry","price":27},
-{"owner":"Barry","price":138},{"owner":"Bob","price":68},{"owner":"Bob","price":50},
-{"owner":"Barry","price":9},{"owner":"Bob","price":123},{"owner":"Bob","price":135},
-{"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
-{"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}];
+const purchases = [
+  { owner: 'Barry', price: 103 },
+  { owner: 'Bob', price: 75 },
+  { owner: 'Bob', price: 73 },
+  { owner: 'Barry', price: 57 },
+  { owner: 'Barry', price: 128 },
+  { owner: 'Bob', price: 119 },
+  { owner: 'Barry', price: 133 },
+  { owner: 'Barry', price: 27 },
+  { owner: 'Barry', price: 138 },
+  { owner: 'Bob', price: 68 },
+  { owner: 'Bob', price: 50 },
+  { owner: 'Barry', price: 9 },
+  { owner: 'Bob', price: 123 },
+  { owner: 'Bob', price: 135 },
+  { owner: 'Barry', price: 30 },
+  { owner: 'Barry', price: 129 },
+  { owner: 'Barry', price: 38 },
+  { owner: 'Bob', price: 133 },
+  { owner: 'Barry', price: 109 },
+  { owner: 'Bob', price: 115 },
+]
 // Do not edit the code above.
 
 /*
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
-
-
+let bobsTotal = purchases.reduce(function(total, cur) {
+  if (cur.owner === 'Bob') {
+    total = total + cur.price
+  }
+  return total
+}, 0)
